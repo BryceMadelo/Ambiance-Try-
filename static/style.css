@@ -25,118 +25,232 @@
     src: url("../static/fonts/Assistant-Regular.ttf");
 }
 
+* {
+    box-sizing: border-box;
+  }
+
+html {
+    height: 100%;
+}
+
+div {
+    display: block;
+  }
+
 body{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: var(--background-white);
 }
 
-header{
+body > .nav_bar {
+    height: 10%;
+    width: 100%;
+    background-color: #800000;
     display: flex;
-    background-color: var(--background-red);
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: "Aoboshi One", serif;
-}
-.date{
-    color:rgba(255, 255, 255, 0.75);
-    font-family: "Assistant", sans-serif;
-    font-size: 1.5rem   ;
-}
-.title{
-    color: var(--pup-gold);
-    font-size: 2.5rem;
-    font-weight: bold;
+    flex-direction: row;
+    justify-content: space-between;
     
 }
-.settings{
+.nav_bar > .title {
+    height: auto;
+    width: auto;
     display: flex;
-    color: white;
-    font-family: "Antic", sans-serif;
-    font-size: 1.5rem;
-    gap: 8px;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2%;
 }
-.settings img{
-    width: 24px;
+
+.nav_bar > .title p {
+    font-size: 5.5vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    font-family: "Aoboshi One";
+    color: #DBA729;
 }
-main{
+
+.nav_bar > .settings {
+    height: 50%;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2.5%;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.nav_bar > .settings > .PUP_text p, .line_1 p {
+    font-size: 3.8vh;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    font-family: "Antic";
+    color: #F5F5F5;
+}
+.nav_bar > .settings > .settings_img {
+    height: 90%;
+    width: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.date_logo_container {
+    height: 13%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #DBA729;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date_logo_container > .time_date {
+    height: 50%;
+    width: 23%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000000;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.date_logo_container > .time_date > .time p, .line_2 p, .date p {
+    font-size: 3vh;
+    font-family: "Assistant";
+    font-weight: bolder;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.monitors_classification_container {
+    height: 60%;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    background-color: #800000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5%;
+}
+.monitors_classification_container > .monitors_container {
+    height: 100%;
+    width: 78%;
+    background-color: #800000;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.error-message{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--error-red)
-}
-.content-container{
-    display: flex;
-    gap: 100px;
-}
-.sensor-container{
-    display: grid;
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow, .monitor_2ndRow, .monitor_3rdRow {
+    height: 29%;
     width: 100%;
-    grid-template-columns: 300px 300px 300px;
-    justify-content: center; 
-    align-items: center;
-    gap: 20px;
-    margin-top: 0;
-    margin-bottom: 0; 
-    margin-left: 20px;   
-}    
-.sensor-data{
+    background-color: #800000;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow {
     display: flex;
-    box-sizing: border-box;
-    padding: 20px;
-    border: 1px solid #000;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature, .pressure, .humidity {
+height: 100%;
+width: 31.5%;
+background-color: white;
+border-radius: 10px;
+border: 1px solid black;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.monitors_classification_container > .monitors_container > .monitor_2ndRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.monitors_classification_container > .monitors_container > .monitor_2ndRow div {
+height: 100%;
+width: 31.5%;
+background-color: white;
+border-radius: 10px;
+border: 1px solid black;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.monitors_classification_container > .monitors_container > .monitor_3rdRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.monitors_classification_container > .monitors_container > .monitor_3rdRow div {
+height: 100%;
+width: 31.5%;
+background-color: white;
+border-radius: 10px;
+border: 1px solid black;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.monitors_classification_container > .classification_container {
+    height: 100%;
+    width: 20%;
+    background-color: aquamarine;
+    margin-left: auto;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature img {
+    height: 65%;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature > .temp_label_data {
+    height: 68%;
+    width: auto;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-bottom: auto;
+    
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature > .temp_label_data p {
+    font-family: "Nunito";
+    font-size: 3.2vh;
+    color: #000000;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 0;
 }
-.data-label{
-    color: black;
-    font-family: "Nunito", sans-serif;
-    font-size: 20px;
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature > .temp_label_data > #temperature_data {
+    font-family: "Nunito";
+    font-size: 4.5vh;
+    color: #FDD901;
     font-weight: bold;
+    margin-top: 0;
     margin-bottom: 0;
-    margin-left: 20px;
-    
-    
-}  
-.data-point{
-    color: green;
-    font-family: "Nunito", sans-serif;
-    font-weight: bolder;
-    font-size: 30px;
-    margin-left: 20px;
-}
-
-.data-update{
-    color: #384A53;
-    font-family: "Nunito", sans-serif;
-    font-size: 10px;
-    font-weight: bold;
-    margin-bottom: 0;
-    margin-left: 20px;
-    
-}
-
-.meter-container {
-    align-content: center;
-}
-
-footer {
-    background-color: var(--background-red);
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
+    margin-left: auto;
+    margin-right: auto;
 }

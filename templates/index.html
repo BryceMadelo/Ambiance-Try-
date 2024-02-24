@@ -8,87 +8,60 @@
     <title>Ambiance</title>
 </head>
 <body>
-    <header>
-        <div class="date">12:59 AM  |  AUGUST 15 2024 </div>
-        <div class="title">AMBIANCE</div>
-        <div class="settings"> 
-            <div>PUP MAIN  |</div>
-            <img src="{{ url_for('static', filename='assets/settings.svg') }}">
-        </div>      
-    </header>
-    <main>  
-        <div class="error-message">{{ exception }}</div>  
-        <div class="content-container">
-            <div class="sensor-container">
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/temperature.svg') }}">
-                        <div class="data-container">
-                            <div class="data-label">TEMPERATURE</div> 
-                            <div class="data-point">{{ temperature }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                        </div>
+    <div class="nav_bar">
+        <div class="title">
+            <p>AMBIANCE</p>
+        </div>
+        <div class="settings">
+            <div class="PUP_text"><p>PUP MAIN</p></div>
+            <div class="line_1"><p>|</p></div>
+            <img
+            class="settings_img" 
+            src="{{ url_for('static', filename='assets/settings.svg') }}"
+            alt="Settings Icon">
+        </div>
+    </div>
+    <div class="date_logo_container">
+        <div class="time_date">
+            <div class="time"><p>12:59 AM</p></div>
+            <div class="line_2"><p>|</p></div>
+            <div class="date"><p>AUGUST 15 2024</p></div>
+        </div>
+        <img 
+        class="logo"
+        src="{{ url_for('static', filename='assets/pup-logo.svg') }}"
+        alt="PUP Logo">
+    </div>
+    <div class="monitors_classification_container">
+        <div class="monitors_container">
+            <div class="monitor_1stRow">
+                <div class="temperature">
+                    <img 
+                    class="temperature"
+                    src="{{ url_for('static', filename='assets/temperature.svg') }}"
+                    alt="Temperature Icon">
+                    <div class="temp_label_data">
+                        <p>TEMPERATURE</p>
+                        <p id="temperature_data">59°C</p>
+                    </div>
                 </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/pressure.svg') }}">
-                        <div class="data-container">
-                            <div class= "data-label">PRESSURE</div> 
-                            <div class= "data-point">{{ pressure }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                        </div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/humidity.svg') }}">
-                        <div class="data-container">
-                            <div class="data-label">HUMIDITY</div>
-                            <div class="data-point">{{ humidity }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                        </div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/gas.svg') }}">
-                        <div class="data-container">
-                            <div class="data-label">CARBON EMISSIONS</div>
-                            <div class="data-point">{{ gas }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                        </div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/altitude.svg') }}">
-                            <div class="data-label">ALTITUDE</div>
-                            <div class="data-point">{{ altitude }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/TVOC.svg') }}">
-                            <div class="data-label">TVOC</div>
-                            <div class="data-point">{{ tvoc }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/eCO2.svg') }}">
-                            <div class="data-label">ECO2</div>
-                            <div class="data-point">{{ eco2 }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/raw_H2.svg') }}">
-                            <div class="data-label">RAW_H2</div>
-                            <div class="data-point">{{ raw_h2 }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                </div>
-                <div class="sensor-data">
-                        <img src="{{ url_for('static', filename='assets/raw_Ethanol.svg') }}">
-                            <div class="data-label">RAW_ETHANOL</div>
-                            <div class="data-point">{{ raw_ethanol }}</div>
-                            <div class="data-update">Last Updated: Now</div>
-                </div>                 
+                <div class="pressure"></div>
+                <div class="humidity"></div>
             </div>
-            <div class="meter-container">
-                <img src="{{ url_for('static', filename='assets/pup-logo.svg') }}">
+            <div class="monitor_2ndRow">
+                <div class="pm_1.0"></div>
+                <div class="pm_2.5"></div>
+                <div class="pm_10"></div>
+            </div>
+            <div class="monitor_3rdRow">
+                <div class="eco2"></div>
+                <div class="altitude"></div>
+                <div class="volatile"></div>
             </div>
         </div>
-    </main>
-    <footer>
-    </footer>
+        <div class="classification_container">
+
+        </div>
+    </div>
 </body>
 </html>
