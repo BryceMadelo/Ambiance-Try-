@@ -213,26 +213,26 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-left: auto;
 }
 
-.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature {
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature, .pressure, .humidity {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature img {
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature img, .pressure img, .humidity img {
     height: 65%;
+    margin-left: 5%;
 }
 
 .monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature > .temp_label_data {
     height: 68%;
     width: auto;
-    margin-left: 3%;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-top: 4%;
-    margin-bottom: auto;
-    
+    margin-bottom: auto;  
 }
 
 .monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature > .temp_label_data p {
@@ -245,6 +245,68 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .monitors_classification_container > .monitors_container > .monitor_1stRow > .temperature > .temp_label_data > #temperature_data {
+    font-family: "Nunito";
+    font-size: 4.5vh;
+    color: #FDD901;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .pressure > .pressure_label_data {
+    height: 68%;
+    width: auto;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-bottom: auto;  
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .pressure > .pressure_label_data p {
+    font-family: "Nunito";
+    font-size: 3.2vh;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .pressure > .pressure_label_data > #pressure_data {
+    font-family: "Nunito";
+    font-size: 4.5vh;
+    color: #F43101;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .humidity > .humidity_label_data {
+    height: 68%;
+    width: auto;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4%;
+    margin-bottom: auto;  
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .humidity > .humidity_label_data p {
+    font-family: "Nunito";
+    font-size: 3.2vh;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.monitors_classification_container > .monitors_container > .monitor_1stRow > .humidity > .humidity_label_data > #humidity_data {
     font-family: "Nunito";
     font-size: 4.5vh;
     color: #FDD901;

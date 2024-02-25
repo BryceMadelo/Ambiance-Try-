@@ -37,7 +37,7 @@
             <div class="monitor_1stRow">
                 <div class="temperature">
                     <img 
-                    class="temperature"
+                    class="temperature_img"
                     src="{{ url_for('static', filename='assets/temperature.svg') }}"
                     alt="Temperature Icon">
                     <div class="temp_label_data">
@@ -45,8 +45,26 @@
                         <p id="temperature_data">59°C</p>
                     </div>
                 </div>
-                <div class="pressure"></div>
-                <div class="humidity"></div>
+                <div class="pressure">
+                    <img 
+                    class="pressure_img"
+                    src="{{ url_for('static', filename='assets/pressure.svg') }}"
+                    alt="Pressure Icon">
+                    <div class="pressure_label_data">
+                        <p>PRESSURE</p>
+                        <p id="pressure_data">893 hPa</p>
+                    </div>
+                </div>
+                <div class="humidity">
+                    <img 
+                    class="humidty_img"
+                    src="{{ url_for('static', filename='assets/humidity.svg') }}"
+                    alt="Humidity Icon">
+                    <div class="humidity_label_data">
+                        <p>HUMIDITY</p>
+                        <p id="humidity_data">893 hPa</p>
+                    </div>
+                </div>
             </div>
             <div class="monitor_2ndRow">
                 <div class="pm_1.0"></div>
